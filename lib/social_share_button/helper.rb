@@ -41,7 +41,7 @@ module SocialShareButton
         link_content = opts
 
         link_title = t "social_share_button.share_to", :name => t("social_share_button.#{name.downcase}")
-        html << link_to("<span class='fa fa-#{name.downcase}' style='background-image:url(#{name.downcase}_ffffff_64.png)'></span>".html_safe,"#", {:rel => ["nofollow", rel],
+        html << link_to("<span class='fa fa-#{name.downcase}' style='background-image:url(#{image_url(name.downcase + "_ffffff_64.png")})'></span>".html_safe,"#", {:rel => ["nofollow", rel],
                                   "data-site" => name,
                                   :class => "social-share-button-#{name}",
                                   :onclick => "return SocialShareButton.share(this);",
